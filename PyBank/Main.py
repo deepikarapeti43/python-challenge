@@ -1,7 +1,6 @@
 # Import modules
 import os 
 import csv
-import statistics
 
 # Define lists and variables
 months=[]
@@ -38,7 +37,6 @@ with open(budget_csv_file) as csv_file:
         # If count is 1 then it stores the previous month value to current month
         if count_months==1:
             previous_mnth_profit_loss=current_mnth_profit_loss
-            continue
         else:
              # Calculate Average 
              profit_loss_change=current_mnth_profit_loss-previous_mnth_profit_loss
@@ -78,7 +76,7 @@ print(f'Average Change:  ${average_profit_loss}')
 print(f'Greatest Increase in Profits:  {Highest_month} (${greatest_increase_change})')
 print(f'Greatest Decrease in Losses:  {lowest_month} (${greatest_decrease_change})')  
 
-budget_file = os.path.join("output_files", "budget_data_output.txt")
+budget_file = os.path.join("..","analysis", "budget_data_output.txt")
 with open(budget_file, "w") as outfile:
 
     outfile.write("Financial Analysis\n")
