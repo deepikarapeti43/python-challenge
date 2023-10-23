@@ -13,7 +13,7 @@ profit_loss_change=0
 
 
 # Set path
-budget_csv_file=os.path.join("..","Resources","budget_data.csv")
+budget_csv_file=os.path.join("Resources","budget_data.csv")
 
 # open csv file and read
 with open(budget_csv_file) as csv_file:
@@ -76,7 +76,7 @@ print(f'Average Change:  ${average_profit_loss}')
 print(f'Greatest Increase in Profits:  {Highest_month} (${greatest_increase_change})')
 print(f'Greatest Decrease in Losses:  {lowest_month} (${greatest_decrease_change})')  
 
-budget_file = os.path.join("..","analysis", "budget_data_output.txt")
+budget_file = os.path.join("analysis", "budget_data_output.txt")
 with open(budget_file, "w") as outfile:
 
     outfile.write("Financial Analysis\n")

@@ -10,7 +10,7 @@ Doane=0
 Winner_name=''
 
 # Path to collect data from the Resources folder
-election_data_csv_path = os.path.join("..","Resources", "election_data.csv")
+election_data_csv_path = os.path.join("Resources", "election_data.csv")
 
 # Open and read csv
 with open(election_data_csv_path) as csvfile:
@@ -61,7 +61,7 @@ print(f'Raymon Anthony Doane: {percentage_Doane}% {Doane}')
 print("----------------------------")
 print(f'Winner: {Winner_name}')
 
-election_file = os.path.join("..","analysis", "election_data_output.txt")
+election_file = os.path.join("analysis", "election_data_output.txt")
 with open(election_file, "w") as outfile:
     outfile.write("Election results\n")
     outfile.write("----------------------------\n")
